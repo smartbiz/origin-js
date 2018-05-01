@@ -1,3 +1,4 @@
+import ClaimHolderContract from "./../contracts/build/contracts/ClaimHolder.json"
 import ListingsRegistryContract from "./../contracts/build/contracts/ListingsRegistry.json"
 import ListingContract from "./../contracts/build/contracts/Listing.json"
 import PurchaseContract from "./../contracts/build/contracts/Purchase.json"
@@ -21,7 +22,8 @@ class ContractService {
       listingsRegistryContract: ListingsRegistryContract,
       listingContract: ListingContract,
       purchaseContract: PurchaseContract,
-      userRegistryContract: UserRegistryContract
+      userRegistryContract: UserRegistryContract,
+      claimHolderContract: ClaimHolderContract
     }
     for (let name in contracts) {
       this[name] = contract(contracts[name])
